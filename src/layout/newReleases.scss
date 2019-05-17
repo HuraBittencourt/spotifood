@@ -1,0 +1,26 @@
+.new-releases {
+    max-height: 400px;
+
+    &__container {
+        display: flex;
+        margin: 0;
+        overflow-x: scroll;
+        // width: 100%;
+
+        min-width: 100%;
+        height: 480px;
+        padding: 40px 60px;
+
+        &:hover .new-release {
+            transform: translateX(-10%);
+        }
+    }
+}
+
+@media(max-width: 961px) {
+    .new-releases {
+        &__container {
+            padding: 40px 30px;
+        }
+    }
+}

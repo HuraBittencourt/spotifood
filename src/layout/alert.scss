@@ -1,0 +1,19 @@
+.alert {
+    left: 25%;
+    bottom: 10px;
+    width: 80%;
+    margin: auto;
+    width: 50%;
+    border: 1px solid;
+    padding: 10px;
+    position: fixed;
+    z-index: 999;
+
+    &--show {
+        display: block;
+    }
+
+    &--hide {
+        display: none;
+    }
+}

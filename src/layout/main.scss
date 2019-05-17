@@ -1,0 +1,67 @@
+.main {
+
+    &__title {
+        left: 50px;
+        margin: 80px 70px 40px;
+
+    }
+
+    &__open-on-spotify  {
+        margin-left: 70px;
+        font-style: italic;
+    }
+
+    &__categories {
+        display: none;
+        position: relative;
+        overflow-x: scroll;
+        top: 50px;
+        height: 350px;
+        background-color: black;
+        
+        &:hover {
+            display: block;
+        }
+    }
+    
+    &__categories_items {
+        height: 100%;
+        display: flex;
+        overflow-x: scroll;
+        padding: 20px 20px;
+        cursor: pointer;
+    }
+
+    &__category {
+        margin-right: 10px;
+    }
+
+    &__name {
+        color: white;
+        font-size: 18px;
+        font-style: italic;
+        font-weight: bold;
+        text-align: center;
+        margin-top: -70px;
+    }
+
+    .header:hover + &__categories {
+        transition: all 0.5s ease;
+        display: block;
+    }
+
+}
+
+@media(max-width: 961px) {
+    .main {
+        margin-top: 90px;
+
+        &__title {
+            margin: 80px 70px 10px;
+        }
+
+        &__categories {
+            top: 0px;
+        }
+    }
+}

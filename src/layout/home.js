@@ -1,9 +1,10 @@
+import MediaQuery from 'react-responsive';
 import React from 'react';
 
 const Home = () => (
-    <div>
-        Estou na Home
-    </div>
+    <MediaQuery orientation="landscape">
+        
+    </MediaQuery>
 );
 
 export default Home;

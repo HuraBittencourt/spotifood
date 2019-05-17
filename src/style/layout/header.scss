@@ -1,16 +1,128 @@
+@import './base.scss';
 
 .header {
     position: fixed;
     top: 0px;
     width: 100%;
     height: 50px;
-    background-color: gray;
+    background-color: green;
     text-transform: uppercase;
     color: white;
     align-content: center;
-    
+    display: flex;
+    z-index: 9;
 
-    &____header-logo {
+    &__filters {
+        display: flex;
+        width: 100%;
+        margin: 0 20px;
+        justify-content: space-between;
+    }
+    &__simple {
+        margin-left: 70px;
+        left: 10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        // margin-left: 200px;
+    }
+
+    &__search {
+        display: flex;
+        // position: absolute;
+        // right: 200px;
         height: 100%;
+    }
+
+    &__search > input {
+        height: 100%;
+    }
+
+    &__search-title {
+        margin: auto;
+        padding: 10px;
+    }
+
+    .mb-3 {
+        padding: 3px;
+    }
+
+    &__header-category {
+        margin-left: 40px;
+        height: 100%;
+        
+        &:hover + .header__categories {
+            position: absolute;
+            display: block;
+            // right: 0px;
+            overflow-x: scroll;
+        }
+    }
+
+    &__dynamic {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin: 200px;
+    }
+
+
+    &__categories {
+        display: none;
+        position: absolute;
+        top: 50px;
+        height: 350px;
+        background-color: black;
+
+        &:hover {
+            display: block;
+        }
+    }
+    
+    &__categories_items {
+        height: 100%;
+        display: flex;
+        padding: 20px 20px;
+        cursor: pointer;
+    }
+
+    &__category {
+        margin-right: 10px;
+    }
+
+    &__item {
+        margin: 0 5px;
+        width: 100%;
+
+        & button {
+            width: 100%
+        }
+    }
+
+    // &__header-category:hover + &__categories {
+    //     // transition: all 0.5s ease;
+    //     // display: block;
+    //     color: red
+    // }
+
+}
+
+@media(max-width: 961px) {
+    .header {
+        
+        height: 90px!important;
+        
+        &__filters {
+            flex-direction: column;
+            padding: 0px 20px;
+        }
+
+        &__simple {
+            margin: 10px;
+        }
+
+        &__search {
+            position: initial;
+        }
     }
 }
